@@ -2,6 +2,18 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+
+# Ignore everything in data folder except keep the folder itself
+data/*
+!data/.gitkeep
+
+# Ignore Chroma vector store data directory
+chroma_db/
+
+# Ignore Python virtual environments
+venv/
+.env
 
 # C extensions
 *.so
