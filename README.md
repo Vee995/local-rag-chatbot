@@ -45,6 +45,7 @@ ollama run mistral
 
 ### 2. Activate the virtual environment
 python -m venv venv
+py -3.12 -m venv venv (version specfic)
 .\venv\Scripts\activate
 
 ### 3. Install dependices

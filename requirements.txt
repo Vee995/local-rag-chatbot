@@ -1,10 +1,25 @@
-langchain
-langchain-community
-sentence-transformers
-chromadb
-PyMuPDF
-gradio
+# Core LLM framework and community extensions
+langchain==0.3.25 # Langchain for building language model apps
+langchain-community==0.3.25 # Community integrations and extensions for Langchain
 
-# Bed down versions
+# Embeddings and vector databases
+sentence-transformers==4.1.0 # Sentence Transformers for generating text embeddings
+chromadb==1.0.12 # Chroma vector database for storing and querying embeddings
+
+# Document processing
+PyMuPDF==1.26.1
+
+# UI
+gradio==5.33.2 # Creating easy-to-use web interface
+
+# Config and utilities
+PyYAML==6.0.2
+
 # Add config, guardrails, and prompt engineeering
 # Add documentation within the scripts
+# Type hints 
+# add folders for structuring
+# Notes on how to change for a bot that's specfic something else 
+# add pre-requsites like ollama
+# Add screenshots to reame of the gradio app
+# Mention restrictions like images
