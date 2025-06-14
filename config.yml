@@ -1,0 +1,64 @@
+prompt_path: "prompt.txt"
+
+llm:
+  provider: "ollama"
+  model: "mistral"
+  temperature: 0.7
+
+embedding:
+  model_name: "all-MiniLM-L6-v2"
+
+vectorstore:
+  persist_directory: "chroma_db"
+  collection_name: "default_collection"
+
+splitter:
+  chunk_size: 500
+  chunk_overlap: 50
+
+ingestion:
+  data_dir: "data"
+  supported_filetypes: [".pdf", ".txt"]
+
+prompt_variables:
+  - context
+  - question
+
+guardrails:
+  min_question_length: 1
+  max_question_length: 500
+  max_response_length: 500
+
+  banned_words:
+    - damn
+    - stupid
+    - crap
+    - shit
+    - fuck
+
+  banned_topics:
+    - health
+    - finance
+    - gambling
+    - stock market
+    - cryptocurrency
+    - investing
+
+  messages:
+    banned_word: 
+      - "Wow. Did you crawl out from under a rock? Grow up and speak like a civilized human, or don’t speak at all."
+      - "Your vocabulary is as limited as your life choices 🤡. Try again 🙄."
+      - "Profanity isn’t a personality trait. Try harder 🥱."
+      - "Tone it down before I start charging you for therapy sessions. Namaste!"
+      - "Come back when your vocabulary isn’t stuck in middle school."
+      - "If attitude was yoga poses, you’d be stuck in ‘desperate for attention.’ 🤸‍♂️😏"
+    banned_topic:
+      - "I’m a yoga bot, not your workaround for banned topics. Go bother someone else 🚫🧘‍♀️."
+      - "That topic’s a no-go. I'm a bot for yoga, what about that don't you understand!"
+      - "Sorry, my chakras ✨ can’t handle that mess of a topic."
+      - "My chakras are too pure for your shady questions."
+      - "Banned topic alert! Try yoga breathing instead of gambling with your brain."
+      - "That topic’s off-limits. Come back when you’re ready to zen out 🕉️🧘‍♂️."
+
+logging:
+  level: "DEBUG"
