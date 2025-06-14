@@ -1,27 +1,55 @@
 import gradio as gr
-import yaml
+import random
+import sys
+from loguru import logger
+from config_loader import load_config
 from rag_chain import get_rag_chain
 
-# Load config.yaml
-with open("config.yaml", "r", encoding="utf-8") as f:
-    config = yaml.safe_load(f)
+# Load config
+config, _ = load_config("config.yml")
 
+# ---- Logging Setup ----
+logger.remove()  # Remove default Loguru handler
+
+logging_config = config.get("logging", {})
+log_level = logging_config.get("level", "INFO")  # Default to INFO if not set
+
+# Log to console only
+logger.add(sys.stderr, level=log_level)
+logger.info("Console logging initialized.")
+
+# ---- Guardrails Setup ----
 guardrails = config.get("guardrails", {})
 banned_words = guardrails.get("banned_words", [])
 banned_topics = guardrails.get("banned_topics", [])
 messages = guardrails.get("messages", {})
 
-chain = get_rag_chain()
+# Get chain
+chain = get_rag_chain(config_path="config.yml")
 
+# ---- Chatbot Function ----
 def chatbot_fn(question):
     question_lower = question.lower()
+    logger.debug(f"Received question: {question}")
 
     if any(word in question_lower for word in banned_words):
-        return messages.get("banned_word", "Language, please. I'm in a Zen state. 🧘‍♀️")
+        response = random.choice(messages.get("banned_word", ["Language, please. I'm in a Zen state. 🧘‍♀️"]))
+        logger.warning(f"Banned word detected. Responding with: {response}")
+        return response
 
     if any(topic in question_lower for topic in banned_topics):
-        return messages.get("banned_topic", "Nice try 😏 but I’m not touching that topic with a yoga mat.")
+        response = random.choice(messages.get("banned_topic", ["Nice try 😏 but I’m not touching that topic with a yoga mat."]))
+        logger.warning(f"Banned topic detected. Responding with: {response}")
+        return response
 
-    return chain.run(question)
+    response = chain.run(question)
+    logger.debug("Response generated via chain.")
+    return response
 
-gr.Interface(fn=chatbot_fn, inputs="text", outputs="text", title="🧘‍♀️ Om-egaBot – Your Yoga Sidekick").launch()
+# ---- Gradio Interface ----
+gr.Interface(
+    fn=chatbot_fn,
+    inputs="text",
+    outputs="text",
+    title="🧘‍♀️ Om-egaBot – Your Yoga Sidekick"
+).launch()

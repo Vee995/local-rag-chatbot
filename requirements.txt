@@ -14,6 +14,7 @@ gradio==5.33.2 # Creating easy-to-use web interface
 
 # Config and utilities
 PyYAML==6.0.2
+loguru==0.7.3 #Add version
 
 # Add config, guardrails, and prompt engineeering
 # Add documentation within the scripts
@@ -22,4 +23,18 @@ PyYAML==6.0.2
 # Notes on how to change for a bot that's specfic something else 
 # add pre-requsites like ollama
 # Add screenshots to reame of the gradio app
-# Mention restrictions like images
+# Mention restrictions like 
+# MCP server
+# makefile
+# pytests?
+# full documentation 
+# Langchain --> LangSmith vs Langfuse
+# mention services and what they're used for
+# Update bot personality and responses to be shorter
+# Mention basic guardrails and their restrcitions 
+# Only add a refrence if the questions is directly about yoga
+# linting and black formatter
+# token usuage and  big prompt file, slow down? 
+# pep import ordering
+# in app.py: chain.run(question) using invoke shows the query string, doesn't work properly (depratcation)
+# split get_rag_chain functions into smaller functions 
