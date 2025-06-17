@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Usage - rag-project</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Usage";
+        var mkdocs_page_input_path = "setup.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> rag-project
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Usage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-and-getting-started">Setup and Getting Started</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-start-ollama">1. Start Ollama</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-activate-the-virtual-environment">2. Activate the virtual environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-install-dependices">3. Install dependices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-add-your-documents">4. Add your documents</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-ingest-documents">5. Ingest documents</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-run-the-chatbot-ui">6. Run the chatbot UI</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">rag-project</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="setup-and-installation-guide">Setup and Installation Guide</h1>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Before you begin, ensure you have the following installed and set up:</p>
+<ul>
+<li>Python 3.9+ (Python 3.10+ recommended)  </li>
+<li>Ollama — local LLM server (download from <a href="https://ollama.com/download">https://ollama.com/download</a>)  </li>
+<li>Git (optional, for cloning the repo)  </li>
+<li>Virtual environment tool such as <code>venv</code> for Python dependency isolation  </li>
+<li>Basic familiarity with command line / terminal usage  </li>
+</ul>
+<hr />
+<h2 id="setup-and-getting-started">Setup and Getting Started</h2>
+<p>Follow these steps to set up the project and start your local RAG chatbot:</p>
+<h3 id="1-start-ollama">1. Start Ollama</h3>
+<ul>
+<li>Start the Ollama server in a terminal:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ollama<span class="w"> </span>run<span class="w"> </span>&lt;model-name&gt;<span class="w"> </span><span class="c1"># add model name e.g: mistral</span>
+</span></code></pre></div></li>
+<li>
+<p>You can run <code>ollama list</code> to list all the models you have available locally in your Ollama environment.</p>
+</li>
+<li>
+<p>To stop ollama in your terminal, run: <code>/bye</code></p>
+</li>
+</ul>
+<h3 id="2-activate-the-virtual-environment">2. Activate the virtual environment</h3>
+<ul>
+<li>Run the following: 
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv<span class="w"> </span><span class="c1"># or py &lt;add-python-version&gt; -m venv venv (version specific e.g:-3.12)</span>
+</span></code></pre></div></li>
+<li>Proceed to activate the environment:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span></code></pre></div></li>
+<li>To deactivate run the following:<ul>
+<li><code>deactivate</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-install-dependices">3. Install dependices</h3>
+<ul>
+<li>Run the following: <code>pip install -r requirements.txt</code></li>
+</ul>
+<h3 id="4-add-your-documents">4. Add your documents</h3>
+<ul>
+<li>Place <code>PDFs</code> or <code>.txt</code> files into the <code>data/</code> folder.</li>
+<li>A sample folder inside <code>data/</code> contains two yoga PDFs you can use to test the setup.</li>
+</ul>
+<h3 id="5-ingest-documents">5. Ingest documents</h3>
+<ul>
+<li>Run the following from the <code>root</code> directory:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>src/ingestion/ingest_documents.py
+</span></code></pre></div></li>
+</ul>
+<h3 id="6-run-the-chatbot-ui">6. Run the chatbot UI</h3>
+<ul>
+<li>Run the chatbot from the<code>root</code> directory and view using Gradio:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>python<span class="w"> </span>src/app.py
+</span></code></pre></div></li>
+<li>Open http://127.0.0.1:7860 in your browser to chat.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../about/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

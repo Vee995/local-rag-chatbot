@@ -1,3 +1,24 @@
+
+Fully Free and Local — A Foundation for Production
+Fully Free & Open Source:
+This project uses only free and open-source tools and models that run entirely on your local machine — no paid cloud services or subscriptions required. You maintain full control over your data and environment.
+
+Local-First Design:
+All document ingestion, embedding, retrieval, and LLM inference happen locally. This keeps your data private and avoids cloud latency or costs.
+
+Educational Foundation for Production:
+While designed for local use and experimentation, this project’s architecture and components closely mirror patterns used in enterprise-level deployments.
+For example, the same concepts apply when you move to managed services like AWS SageMaker, Amazon OpenSearch, or AWS Lambda for scaling and production robustness.
+
+Easily Adaptable:
+This project provides a solid understanding of retrieval-augmented generation (RAG) pipelines, prompt engineering, observability, and vector stores — all essential skills for building and migrating to production-grade AI applications.
+
+Beginner-Friendly and Fun:
+Primarily, this project is a learning tool to help you understand the basics of LLMs, RAG pipelines, and prompt engineering — perfect for experimentation, exploration, and having fun while getting hands-on with AI.
+
+
+
+
 # local-rag-chatbot - TBU
 A local Retrieval-Augmented Generation (RAG) chatbot using free Python tools, LangChain, llama-cpp-python, and Chroma.
 
@@ -20,6 +41,16 @@ This project demonstrates how to build a local RAG pipeline that:
 
 ---
 
+## What This Project Offers
+- Build a fully local RAG chatbot using free open-source tools and models
+- Ingest and chunk documents (PDF and text)
+- Generate embeddings and store them in a persistent local vector store
+- Query using semantic search combined with a local or remote LLM
+- Experiment with prompt engineering and retrieval chain customization
+- Integrated observability via Langsmith for tracing prompts and responses
+
+---
+
 ## Prerequisites
 Before you begin, make sure you have the following installed and set up:
 - Python 3.9+ (Python 3.10+ recommended)
@@ -38,6 +69,8 @@ Follow these steps to set up the project and start your local RAG chatbot:
     ollama run mistral # model name
     ```
 - You can run `ollama list` to list all the models you have available locally in your Ollama environment.
+
+- To stop ollama in your terminal, run: `/bye`
 
 ### 2. Activate the virtual environment
 - Run the following: 
@@ -68,10 +101,68 @@ Follow these steps to set up the project and start your local RAG chatbot:
 
 ### 6. Run the chatbot UI
 - Run the chatbot from the`root` directory and view using Gradio:
-```bash
-    python src/app.py
-```
+    ```bash
+        python src/app.py
+    ```
 - Open http://127.0.0.1:7860 in your browser to chat.
+
+---
+
+## Tools Used & Setup
+This project leverages several powerful tools and libraries to build a local RAG chatbot:
+
+### LangChain
+- The core framework for chaining language model components and building the retrieval-augmented pipeline.
+
+### Ollama (LLM backend)
+- Provides the local large language model server (e.g., Mistral) used for generation.
+- Setup: Download and install from ollama.com, then start the server with `ollama run mistral`.
+
+### Chroma DB
+- Vector database to store and query embeddings for fast semantic search.
+- Setup: Included in `requirements.txt (chromadb)`, no separate setup required.
+
+### Sentence-Transformers
+- Used for generating vector embeddings of document chunks.
+
+### Gradio
+- Provides the interactive web UI for the chatbot.
+
+### Loguru
+- Easy-to-use logging library to capture and display logs.
+
+### Langsmith
+- (Optional) Observability and tracing for LangChain runs. Enable via config if needed.
+
+### Pytest
+- Testing framework for running automated tests.
+
+---
+Langsmith (Observability & Tracing)
+Langsmith helps you monitor and trace your LangChain runs for better debugging and insights.
+
+Requirements:
+You need to create an account on Langsmith.
+
+Setup:
+
+Obtain your API key from Langsmith.
+
+Create an .env file in your project root (or update it) with your API key:
+
+env
+Copy
+Edit
+LANGSMITH_API_KEY=your_api_key_here
+See the included .env_sample file for reference.
+
+Enable Langsmith in your config.yml by setting the appropriate flags and API key usage.
+
+Make sure to restart your app after configuration changes to enable tracing
+
+
+
+
 
 ## Tech Stack
 

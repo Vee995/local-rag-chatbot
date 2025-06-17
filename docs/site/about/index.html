@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>About - rag-project</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "About";
+        var mkdocs_page_input_path = "about.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> rag-project
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">About</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tech-stack">🔧 Tech Stack</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">🔍 Key Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#educational-foundation">🏡 Educational Foundation</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../setup/">Usage</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">rag-project</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">About</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="chakra-karen">Chakra Karen</h1>
+<p><strong>Chakra Karen</strong> is your yoga assistant with a big personality.  She's a Retrieval-Augmented Generation (RAG) chatbot that speaks her mind, sets boundaries, and helps you (maybe) align your chakras. 😌</p>
+<p>Miss Karen has got:</p>
+<ul>
+<li>🧘🏻‍♀️ Zen-like wisdom (well sort of...her third eye rolls a lot)</li>
+<li>🚨 The attitude of someone who <em>definitely</em> wants to speak to the manager</li>
+<li>🔋The power of open-source LLMs</li>
+</ul>
+<hr />
+<h2 id="tech-stack">🔧 Tech Stack</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LangChain</strong></td>
+<td>Chaining prompts and retrieval</td>
+</tr>
+<tr>
+<td><strong>Ollama</strong></td>
+<td>Running local LLMs like <code>mistral</code></td>
+</tr>
+<tr>
+<td><strong>ChromaDB</strong></td>
+<td>Storing vector embeddings of your documents</td>
+</tr>
+<tr>
+<td><strong>SentenceTransformers</strong></td>
+<td>Embedding text</td>
+</tr>
+<tr>
+<td><strong>Gradio</strong></td>
+<td>Interactive and user-friendly UI</td>
+</tr>
+<tr>
+<td><strong>Python</strong></td>
+<td>Because Karen doesn't mess with JavaScript</td>
+</tr>
+<tr>
+<td><strong>Loguru</strong></td>
+<td>Logging with flair</td>
+</tr>
+<tr>
+<td><strong>LangSmith</strong></td>
+<td>Tracking, debugging, and versioning prompts/chains</td>
+</tr>
+<tr>
+<td><strong>MkDocs</strong></td>
+<td>Clean documentation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-features">🔍 Key Features</h2>
+<p><strong>Fully Free &amp; Open Source</strong><br />
+Uses only free, open-source tools and models running entirely on your local machine. No paid cloud services or subscriptions required. You maintain full control over your data and environment.</p>
+<p><strong>Local-First Design</strong><br />
+All document ingestion, embedding, retrieval, and LLM inference happen locally to keep your data private and avoid cloud latency or costs.</p>
+<p><strong>Educational Foundation for Production</strong><br />
+The architecture and components closely mirror enterprise patterns, making it easy to scale or migrate to managed cloud services like AWS SageMaker, Amazon OpenSearch, or AWS Lambda.</p>
+<p><strong>Educational Foundation</strong><br />
+Provides a solid understanding of RAG pipelines, prompt engineering, observability, and vector stores. </p>
+<p><strong>Beginner-Friendly &amp; Fun</strong><br />
+Designed as a hands-on learning tool to explore LLMs, RAG pipelines, and prompt engineering — perfect for experimentation and skill-building.</p>
+<p><strong>Configurable Design</strong><br />
+Easily customize all key settings via a single <code>config.yaml</code> file</p>
+<hr />
+<h2 id="educational-foundation">🏡 Educational Foundation</h2>
+<p>Chakra Karen is intentionally designed as a local-first project to help you <strong>learn the core concepts behind Retrieval-Augmented Generation (RAG)</strong> systems, prompt engineering, vector databases, and LLM orchestration — all without needing to deploy to the cloud.</p>
+<p>While this project is built for local experimentation, Chakra Karen provides a practical foundation to understand these concepts before moving on to build more complex, production ready applications tailored for the cloud. Examples of typical cloud production components include:</p>
+<p><strong>Ingestion Pipelines</strong><br />
+  Use AWS S3 + Glue or Athena for large-scale data preparation.</p>
+<p><strong>Vector Store</strong><br />
+  Replace Chroma with OpenSearch, Pinecone, or Amazon Kendra.</p>
+<p><strong>LLM Inference at Scale</strong><br />
+Use AWS Bedrock to access managed foundation models from multiple providers — no need to manage containers or endpoints manually.</p>
+<p><strong>Infrastructure as Code</strong><br />
+Automate and version your infrastructure with tools like Terraform or AWS CloudFormation to ensure repeatable, maintainable deployments.</p>
+<p><strong>Observability and Tracing</strong><br />
+Integrate Langfuse to trace, debug, and analyze your chains and LLM interactions. It helps capture prompt performance, user feedback, and logs for production-ready monitoring and iteration.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup/" class="btn btn-neutral float-right" title="Usage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
