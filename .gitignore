@@ -3,9 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+*.pytest_cache
 
-# Ignore everything in data folder except keep the folder itself
+# Ignore everything in data folder except keep file and sample folder
 data/*
+!data/sample_data/
 !data/.gitkeep
 
 # Ignore Chroma vector store data directory

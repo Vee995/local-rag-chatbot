@@ -1,7 +1,7 @@
-# local-rag-chatbot
+# local-rag-chatbot - TBU
 A local Retrieval-Augmented Generation (RAG) chatbot using free Python tools, LangChain, llama-cpp-python, and Chroma.
 
-# local-rag-chatbot-ollama
+# local-rag-chatbot-ollama -TBU
 
 A local Retrieval-Augmented Generation (RAG) chatbot using Ollama LLM, Python, LangChain, ChromaDB, and Gradio.
 
@@ -19,6 +19,59 @@ This project demonstrates how to build a local RAG pipeline that:
 - Provides an interactive chat UI with Gradio
 
 ---
+
+## Prerequisites
+Before you begin, make sure you have the following installed and set up:
+- Python 3.9+ (Python 3.10+ recommended)
+- Ollama — local LLM server (download from https://ollama.com/download)
+- Git (optional, for cloning the repo)
+- Virtual environment tool such as venv for Python dependency isolation
+- Basic familiarity with command line / terminal usage
+
+---
+## Setup and Getting Started
+Follow these steps to set up the project and start your local RAG chatbot:
+
+### 1. Start Ollama 
+- Start the Ollama server in a terminal:
+    ```bash
+    ollama run mistral # model name
+    ```
+- You can run `ollama list` to list all the models you have available locally in your Ollama environment.
+
+### 2. Activate the virtual environment
+- Run the following: 
+    ```bash
+    python -m venv venv # or py -3.12 -m venv venv (version specific)
+    ```
+- Proceed to activate the environment:
+    ```bash
+    .\venv\Scripts\activate
+    ```
+- To deactivate run the following:
+    ```bash
+    deactivate
+    ```
+
+### 3. Install dependices
+- Run the following: `pip install -r requirements.txt`
+
+### 4. Add your documents
+- Place `PDFs` or `.txt` files into the `data/` folder.
+- A sample folder inside `data/` contains two yoga PDFs you can use to test the setup.
+
+### 5. Ingest documents
+- Run the following from the `root` directory:
+    ```bash
+    python src/ingestion/ingest_documents.py
+  ```
+
+### 6. Run the chatbot UI
+- Run the chatbot from the`root` directory and view using Gradio:
+```bash
+    python src/app.py
+```
+- Open http://127.0.0.1:7860 in your browser to chat.
 
 ## Tech Stack
 
@@ -48,21 +101,21 @@ python -m venv venv
 py -3.12 -m venv venv (version specfic)
 .\venv\Scripts\activate
 
-### 3. Install dependices
+### 3. Install dependencies:
 pip install -r requirements.txt
 
 ### 4. Add your documents
 Place PDFs or .txt files into the data/ folder.
 
-### Ingest documents
+### 5. Ingest documents
 python ingest_docs.py
 
-###  Run the chatbot UI
-python app.py
-Open http://127.0.0.1:7860 in your browser to chat.
-
-## How It Works: Retrieval-Augmented Generation (RAG)
-RAG combines:
+### 6. Run the chatbot UI
+- Run the chatbot from the`root` directory and view using Gradio:
+```bash
+    python src/app.py
+```
+- Open http://127.0.0.1:7860 in your browser to chat.
 
 Retrieval: Searching your documents for relevant context
 

@@ -1,33 +1,56 @@
-prompt_path: "prompt.txt"
+# Prompt Configuration
+# Folder where prompt templates are stored
+prompt_folder: "prompt_engineering"
 
-llm:
-  provider: "ollama"
-  model: "mistral"
-  temperature: 0.7
+# Type of prompt template to use:
+# options: basic, fewshot, cot (chain of thought) and chaining
+prompt_type: "chaining"
 
-embedding:
-  model_name: "all-MiniLM-L6-v2"
-
-vectorstore:
-  persist_directory: "chroma_db"
-  collection_name: "default_collection"
-
-splitter:
-  chunk_size: 500
-  chunk_overlap: 50
-
-ingestion:
-  data_dir: "data"
-  supported_filetypes: [".pdf", ".txt"]
-
+# Variables expected in prompt templates
 prompt_variables:
   - context
   - question
 
+
+# Language Model (LLM) Settings
+llm:
+  provider: "ollama"       # e.g., openai, huggingface, ollama
+  model: "mistral"         # model name/version
+  temperature: 0.7         # sampling temperature for creativity
+
+
+chain:
+  type: "stuff"  # options: stuff, map_reduce, refine, map_rerank
+
+
+# Embedding Model Settings
+embedding:
+  model_name: "all-MiniLM-L6-v2"  # sentence transformer model for embeddings
+
+
+# Vector Store Settings
+vectorstore:
+  persist_directory: "chroma_db"    # directory to save vector db
+  collection_name: "default_collection"  # collection/table name for vectors
+
+
+# Data Ingestion Settings
+ingestion:
+  data_dir: "data"                   # folder for input documents/files
+  supported_filetypes: [".pdf", ".txt"]  # allowed file types
+
+
+# Text Splitter Settings
+splitter:
+  chunk_size: 500           # max tokens per chunk
+  chunk_overlap: 50         # overlap tokens between chunks
+
+
+# Guardrails / Content Moderation
 guardrails:
-  min_question_length: 1
-  max_question_length: 500
-  max_response_length: 500
+  min_question_length: 1     # minimum allowed question length
+  max_question_length: 500   # maximum allowed question length
+  max_response_length: 500   # max tokens in generated answer
 
   banned_words:
     - damn
@@ -60,5 +83,13 @@ guardrails:
       - "Banned topic alert! Try yoga breathing instead of gambling with your brain."
       - "That topic’s off-limits. Come back when you’re ready to zen out 🕉️🧘‍♂️."
 
+
+# Langsmith (Trace Logging) Settings
+langsmith:
+  enabled: false              # enable or disable trace logging
+  project: "chakra-karen-chatbot-traces"   # project name for logs
+
+
+# Logging Configuration
 logging:
-  level: "DEBUG"
+  level: "DEBUG"             # logging level (DEBUG, INFO, WARNING, ERROR)
