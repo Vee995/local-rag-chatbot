@@ -9,8 +9,9 @@ chromadb==1.0.12 # Chroma vector database for storing and querying embeddings
 # Document processing
 PyMuPDF==1.26.1
 mkdocs== 1.6.1
+mkdocs-material==9.6.14
 pymdown-extensions==10.15
-pygment==2.19.1
+pygments==2.19.1
 
 # UI
 gradio==5.33.2 # Creating easy-to-use web interface

@@ -4,7 +4,7 @@ prompt_folder: "prompt_engineering"
 
 # Type of prompt template to use:
 # options: basic, fewshot, cot (chain of thought) and chaining
-prompt_type: "chaining"
+prompt_type: "basic"
 
 # Variables expected in prompt templates
 prompt_variables:
@@ -66,6 +66,8 @@ guardrails:
     - stock market
     - cryptocurrency
     - investing
+    - hacking
+    - legal
 
   messages:
     banned_word: 

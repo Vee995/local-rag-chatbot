@@ -33,7 +33,7 @@ Follow these steps to set up the project and start your local RAG chatbot:
     ```bash
     .\venv\Scripts\activate
     ```
-- To deactivate run the following:
+- To deactivate, run the following:
     ```bash
     deactivate
     ```
@@ -59,11 +59,11 @@ Follow these steps to set up the project and start your local RAG chatbot:
     ```python
     python src/app.py
     ```
-- Open http://127.0.0.1:7860 in your browser to chat.
+- Open [http://127.0.0.1:7860](http://127.0.0.1:7860) in your browser to chat.
 
 ---
 
-## Customizing Chakra Karen: Config and Project Updates
+## Customising Chakra Karen: Config and Project Updates
 
 If you want to adapt Chakra Karen beyond its default yoga focus, here’s how you can update the project:
 

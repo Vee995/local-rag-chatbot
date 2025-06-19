@@ -28,31 +28,55 @@ Miss Karen has got:
 
 ## 🔍 Key Features
 
-**Fully Free & Open Source**  
-Uses only free, open-source tools and models running entirely on your local machine. No paid cloud services or subscriptions required. You maintain full control over your data and environment.
+<div class="grid cards" markdown>
 
-**Local-First Design**  
-All document ingestion, embedding, retrieval, and LLM inference happen locally to keep your data private and avoid cloud latency or costs.
+-   :bulb: **Fully Free & Open Source**
 
-**Educational Foundation for Production**  
-The architecture and components closely mirror enterprise patterns, making it easy to scale or migrate to managed cloud services like AWS SageMaker, Amazon OpenSearch, or AWS Lambda.
+    ---
 
-**Educational Foundation**  
-Provides a solid understanding of RAG pipelines, prompt engineering, observability, and vector stores. 
+    Uses only free, open-source tools and models running entirely on your local machine.
 
-**Beginner-Friendly & Fun**  
-Designed as a hands-on learning tool to explore LLMs, RAG pipelines, and prompt engineering — perfect for experimentation and skill-building.
+-   :house: **Local-First Design**
 
-**Configurable Design**  
-Easily customize all key settings via a single `config.yaml` file
+    ---
+
+    All document ingestion, embedding, retrieval, and LLM inference happen locally.
+
+-   :mortar_board: **Educational Foundation**
+
+    ---
+
+    Provides an understanding of RAG pipelines, prompt engineering, observability, and vector stores.
+
+-   :sparkles: **Beginner-Friendly & Fun**
+
+    ---
+
+    Designed as a hands-on learning project to explore LLMs, RAG concepts, and prompt engineering.
+
+-   :gear: **Configurable Design**
+
+    ---
+
+    Easily customise core components via `config.yaml`. Swap out models, prompts etc. as needed.
+
+-   :computer: **Simple Web UI with Gradio**
+
+    ---
+
+    Interact with the chatbot via a clean, local web UI built using Gradio. 
+
+</div>
 
 ---
 
 ## 🏡 Educational Foundation
 
-Chakra Karen is intentionally designed as a local-first project to help you **learn the core concepts behind Retrieval-Augmented Generation (RAG)** systems, prompt engineering, vector databases, and LLM orchestration — all without needing to deploy to the cloud.
+Chakra Karen is intentionally designed as a local-first project to help you **learn the core concepts behind Retrieval-Augmented Generation (RAG)** systems, prompt engineering, vector databases, and LLM orchestration without needing to deploy to the cloud.
 
-While this project is built for local experimentation, Chakra Karen provides a practical foundation to understand these concepts before moving on to build more complex, production ready applications tailored for the cloud. Examples of typical cloud production components include:
+While this project is built for local experimentation, Chakra Karen provides a practical foundation to understand these concepts before moving on to build more complex, production ready applications tailored for the cloud. 
+
+Examples of typical cloud production components include:
 
 **Ingestion Pipelines**  
   Use AWS S3 + Glue or Athena for large-scale data preparation.
