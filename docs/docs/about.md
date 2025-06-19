@@ -8,6 +8,8 @@ Miss Karen has got:
 - 🚨 The attitude of someone who *definitely* wants to speak to the manager
 - 🔋The power of open-source LLMs
 
+![karen](assets/basic.png)
+
 ---
 
 ## 🔧 Tech Stack

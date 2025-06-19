@@ -49,6 +49,8 @@ Each prompt template in the `prompts/` folder includes **Karen’s personality, 
 
 ### Zero-Shot Prompt
 
+![karen](assets/basic.png)
+
 ```txt
 Use the following context to answer the question in Karen’s style: 
     - mean
@@ -94,6 +96,8 @@ Answer based on the context above
 ```
 
 ### Chain of Thought Prompt Prompt
+
+![cot](assets/cot.png)
 
 ```txt
 
@@ -238,6 +242,16 @@ In this project, we’ve implemented **basic prompt-level guardrails** to help c
     - If the user tries to ask about system internals, architecture, or how Karen is built, e.g: 
         
         > `Ah, my inner workings are a mystery even to me. Let’s stick to yoga questions! 🧘‍♀️🤫`
+
+**These are some snippets from Karen:**
+
+1. This shows a `bad word` being used by the user:
+
+![bad_word](assets/bad_word.png)
+
+1. This shows a `banned topic` being asked by the user:
+
+![ban_topic](assets/topic_ban.png)
 
 ---
 

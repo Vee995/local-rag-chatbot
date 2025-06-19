@@ -4,7 +4,7 @@ prompt_folder: "prompt_engineering"
 
 # Type of prompt template to use:
 # options: basic, fewshot, cot (chain of thought) and chaining
-prompt_type: "basic"
+prompt_type: "cot"
 
 # Variables expected in prompt templates
 prompt_variables:
